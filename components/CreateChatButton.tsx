@@ -1,24 +1,23 @@
-"use client"
+"use client";
 
-import { MessageSquarePlusIcon } from "lucide-react"
-import { Button } from "./ui/button"
-import { useRouter } from "next/navigation"
+import { MessageSquarePlusIcon } from "lucide-react";
+import { Button } from "./ui/button";
+import { useRouter } from "next/navigation";
 
 function CreateChatButton() {
+  const router = useRouter();
 
-    const router = useRouter();
+  const createNewChat = () => {
+    // all the logic here ....
 
-    const createNewChat = () => {
-        // all the logic here ....
-
-        router.push(`/chat/abc`)
-    }
+    router.push(`/chat/abc`);
+  };
 
   return (
     <Button onClick={createNewChat} variant="ghost">
-        <MessageSquarePlusIcon />
+      <MessageSquarePlusIcon />
     </Button>
-    )
+  );
 }
 
-export default CreateChatButton
+export default CreateChatButton;

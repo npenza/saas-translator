@@ -28,12 +28,19 @@ function UserButton({ session }: { session: Session | null }) {
     session && (
       <DropdownMenu>
         <DropdownMenuTrigger>
-          <UserAvatar name={session.user?.name || ""} image={session.user?.image || ""} />
+          <UserAvatar
+            name={session.user?.name || ""}
+            image={session.user?.image || ""}
+          />
         </DropdownMenuTrigger>
         <DropdownMenuContent>
-          <DropdownMenuLabel>{session.user?.name || "My Account"}</DropdownMenuLabel>
+          <DropdownMenuLabel>
+            {session.user?.name || "My Account"}
+          </DropdownMenuLabel>
           <DropdownMenuSeparator />
-          <DropdownMenuItem onClick={() => signOut()}>Sign Out</DropdownMenuItem>
+          <DropdownMenuItem onClick={() => signOut()}>
+            Sign Out
+          </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
     )
